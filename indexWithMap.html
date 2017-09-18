@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ExploreState</title>
+
+<link rel = "icon" type="image/gif" href="state.gif" />
+
+<style>
+*{
+    box-sizing: border-box;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"]{
+    float: left;
+    padding: 15px;
+}
+html{
+    font-family: "Lucida Sans", sans-serif;
+}
+a{
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover{
+	color:#FFF;
+	text-decoration: underline;
+}
+a:hover#menu-icon{
+	border-radius: 4px 4px 0 0;
+}
+
+body{
+	background: #FFF;
+	font: 14px/20px Arial, San-Serif;
+	color: #555;
+	margin: 0;
+}
+#content{
+	margin: 0 auto;
+	max-width: 1140px;
+	margin-top: 110px;
+}
+.current{
+	color: #FFF;
+	text-decoration:underline;
+}
+#doc{
+	margin: 0px 0;
+}
+footer{
+	background: #333333;
+	width: 100%;
+	overflow: hidden;
+	opacity: 0.90;
+}
+footer p, footer h3{
+	color: #FFF;
+}
+footer p a{
+	color: #FFF;
+	text-decoration: none;
+}
+footer.second{
+	border-top: 10 px solid #4D4E50;
+	background-color: #333333;
+	max-height: 80px;
+	text-align: center;
+	opacity: 0.95;
+}
+h1 {
+	text-align: center;
+	padding:1%;
+	height: 0px;
+	text-decoration: underline;
+}
+h2{
+	text-decoration: underline;
+	line-height: 280%;
+	padding-left: 2%;
+}
+h3{
+	line-height:110%;
+	padding: 5% 0;
+	padding-left: 5%;
+}
+h4{
+	line-height: 280%;
+	padding-left: 2%;
+	color: #FFF;	
+}
+.header{
+    background-color: #C01111;
+    color: #ffffff;
+	opacity: 0.90;
+	height: 120px;
+	position: fixed;
+	top:0;
+	left:0;	
+	width: 100%;
+	z-index: 100;
+}
+.home p{
+	line-height: 40px;
+	padding:2px;
+}
+ins{
+	font-weight: normal;
+	text-decoration:none;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #e6b800;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover{
+    background-color: #C01111;
+}
+.menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	margin-top: 130px;
+	text-align:center;
+}
+p{
+	margin-top: 1px;
+	width: 100%;
+	margin: 2% 2%;
+	text-align: center;
+}
+section{
+	width: 29%;
+	float: left;
+	margin: 2% 2%;
+	text-align: center;
+}
+ul{
+	list-style:none;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+</style>
+
+</head>
+
+
+<body>
+	
+	<div class="header">
+		<!--<center><a href="index.html"><img src="state.gif"></center>-->
+		
+	</div>
+	
+	<div class="row">
+
+		<div class="col-2.5 col-m-2 menu">
+			<ul>
+				<li><a href="index.html"class="current">Home</a></li>
+				<li><a href="buildingdirectory.html">Building Directory</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+		</div>
+		</div>
+	</div>
+
+<style type="text/css">
+	.map {float: right}
+	</style>
+<div class="map" id="map" style="width:400px;height:400px;background:yellow"></div>
+
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(42.0280154999, -93.649133),
+    zoom: 17,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKJ3Imy8RLQ2O2kIU_6b2zP5eeUCCHSLI&callback=myMap"></script>
+
+
+
+	<footer>
+		<section>
+			<h3>More Text</h3>
+			<p><b>more text</b><br>
+			<br>more text<br></p>
+		</section>
+		
+		<section>
+			<h3>insert text</h3>
+		</section>
+		
+		<section>
+			<img src = "state.gif" />
+		</section>
+	</footer>
+	
+	<footer class = "second">
+		<h4> ©Copyright - ExploreState 2017.</h4>
+	</footer>
+</body>
+</html>
