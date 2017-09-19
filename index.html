@@ -100,7 +100,7 @@ h4{
     color: #ffffff;
 	opacity: 0.90;
 	height: 120px;
-	position: fixed;
+	
 	top:0;
 	left:0;	
 	width: 100%;
@@ -184,9 +184,13 @@ ul{
 </style>
 
 </head>
+
+
 <body>
+	
 	<div class="header">
 		<!--<center><a href="index.html"><img src="state.gif"></center>-->
+		
 	</div>
 	
 	<div class="row">
@@ -200,6 +204,30 @@ ul{
 		</div>
 		</div>
 	</div>
+
+<style type="text/css">
+	.map {float: right}
+	</style>
+<div class="map" id="map" style="width:800px;height:800px;background:yellow"></div>
+
+<script>
+function myMap() {
+	var location = {lat: 42.0280154999, lng: -93.649133}
+	var map = new google.maps.Map(document.getElementById("map"),{
+   zoom: 17,
+   center: location,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+    });
+var marker = new google.maps.Marker({
+	position: location,
+	map: map
+})
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKJ3Imy8RLQ2O2kIU_6b2zP5eeUCCHSLI&callback=myMap"></script>
+
+
 
 	<footer>
 		<section>
