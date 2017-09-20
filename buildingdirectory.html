@@ -15,6 +15,7 @@
     content: "";
     clear: both;
     display: table;
+
 }
 [class*="col-"] {
     float: left;
@@ -44,34 +45,27 @@ a:hover#menu-icon{
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	margin-top: 130px;
 }
-.random{
-
-    background-color: #e6b800;
-    padding: 15px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	margin-left: 15px;
-}
-.random h3{
-	line-height:110%;
-	padding: 5% 0;
-	text-decoration: underline;
-	
-}
-.random p{
-	margin-top: 1px;
-	width: 100%;
-	margin: 4% 4%;
-	text-align: left;
-}
 
 body{
 	background: #FFF;
 	font: 14px/20px Arial, San-Serif;
 	color: #555;
 	margin: 0;
+}
+.building{
+	padding:1%;
+	padding-left:2%;
+	margin-top:0px;	
+}
+.building ins{
+	font-weight: bold;
+	text-decoration:none;
+}
+.building p{
+	font-weight:normal;
+	padding:0;
+	text-align:left;
+	padding:0%;
 }
 .current{
 	color: #FFF;
@@ -129,36 +123,25 @@ h4{
 	width: 100%;
 	z-index: 100;
 }
-.building{
-	padding:1%;
-	padding-left:2%;
-	margin-top:0px;	
+.mainbody{
+	padding-top: 115px;
 }
-.building ins{
-	font-weight: bold;
-	text-decoration:none;
-}
-.building p{
-	font-weight:normal;
-	padding:0;
-	text-align:left;
-	padding:0%;
-}
+
 .menu li{
-    padding: 8px;
+    padding: 4px;
     margin-bottom: 7px;
     background-color: #e6b800;
     color: #ffffff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .menu li:hover{
-    background-color: #C01111;
+    background-color: #4D4E50;
 }
 .menu ul{
     list-style-type: none;
     margin: 0;
-    padding: 0;
-	margin-top: 130px;
+    padding-top: 0px;
+	margin-top: 0px;
 	text-align:center;
 }
 p{
@@ -171,6 +154,28 @@ p{
 	text-align: center;
 	margin-top: 90px;
 	padding: 3%;
+}
+.random{
+
+    background-color: #e6b800;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	margin-left: 15px;
+}
+.random h3{
+	line-height:110%;
+	padding: 5% 0;
+	text-decoration: underline;
+	
+}
+.random p{
+	margin-top: 1px;
+	width: 100%;
+	margin: 4% 4%;
+	text-align: left;
 }
 section{
 	width: 29%;
@@ -221,12 +226,9 @@ ul{
 <body>
 	<div class="header">
 		<!--<center><a href="index.html"><img src="state.gif"></center>-->
-	</div>
-	
-	<div class="row">
 		<div class="col-2.5 col-m-2 menu">
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="indexWithMap.html">Home</a></li>
 				<li><a href="buildingdirectory.html"class="current">Building Directory</a></li>
 				<li><a href="about.html">About</a></li>
 			</ul>
@@ -234,12 +236,13 @@ ul{
 	</div>
 	
 	<div class="row">
-		<h1>Directory building links</h1>
-		
-		<div class="col-2 col-m-12 random">
+		<div class = "mainbody">
+			<h1>Directory building links</h1>
+			
+			<div class="col-2 col-m-12 random">
 				<h3>Something random?</h3>
 				<p><b>random state facts idk</b></p>
-
+			</div>
 		</div>
 		
 		<!--all the http://www.fpm.iastate.edu/maps/buildings/ links will need to change to our own web page links-->	
@@ -307,8 +310,6 @@ ul{
 			<img src="Atanasoff_Hall.jpg" style="width:70px;height:70px;">
 			</p>
 		</div>
-	</div>
-	<div class="row">
 	</div>
 	<footer>
 		<section>
