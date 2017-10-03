@@ -17,6 +17,9 @@
     display: table;
 
 }
+
+
+
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -55,7 +58,7 @@ body{
 .building{
 	padding:1%;
 	padding-left:2%;
-	margin-top:0px;	
+	margin-top:0px;
 }
 .building ins{
 	font-weight: bold;
@@ -119,7 +122,7 @@ h4{
 	height: 120px;
 	position: fixed;
 	top:0;
-	left:0;	
+	left:0;
 	width: 100%;
 	z-index: 100;
 }
@@ -169,7 +172,7 @@ p{
 	line-height:110%;
 	padding: 5% 0;
 	text-decoration: underline;
-	
+
 }
 .random p{
 	margin-top: 1px;
@@ -220,6 +223,21 @@ ul{
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 }
+.pics{
+  width: 40px;
+  height:40px;
+}
+.zoom{
+  position: absolute;
+  width:0px;
+  -webkit-transition:width 0.3s linear 0s;
+  transition: width 0.3s linear 0s;
+
+
+}
+.pics:hover + .zoom{
+  width:300px;
+}
 </style>
 </head>
 
@@ -234,80 +252,94 @@ ul{
 			</ul>
 		</div>
 	</div>
-	
+
 	<div class="row">
 		<div class = "mainbody">
 			<h1>Directory building links</h1>
-			
+
 			<div class="col-2 col-m-12 random">
 				<h3>Something random?</h3>
 				<p><b>random state facts idk</b></p>
 			</div>
 		</div>
-		
-		<!--all the http://www.fpm.iastate.edu/maps/buildings/ links will need to change to our own web page links-->	
-		<div class="col-3 col-m-12 building" >		
+
+		<!--all the http://www.fpm.iastate.edu/maps/buildings/ links will need to change to our own web page links-->
+		<div class="col-3 col-m-12 building" >
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Atanasoff+Hall');"  style="cursor:pointer;" target="_blank">Attanasoff Hall</ins><br>
 			&emsp;&emsp;
-			<img src="Atanasoff_Hall.jpg" style="width:70px;height:70px;">
+			<img class ="pics" src="Atanasoff_Hall.jpg" >
+      <img class ="zoom" src="Atanasoff_Hall.jpg" >
 			</p>
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Beardshear+Hall');"  style="cursor:pointer;" target="_blank">Beardshear Hall</ins><br>
 			&emsp;&emsp;
-			<img src="beardshear.jpg" style="width:70px;height:70px;">
+			<img  class ="pics"src="beardshear.jpg" >
+      <img  class ="zoom"src="beardshear.jpg" >
 			</p>
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Bessey+Hall');"  style="cursor:pointer;" target="_blank">Bessey Hall</ins><br>
 			&emsp;&emsp;
-			<img src="Bessey.jpg" style="width:70px;height:70px;">
+			<img  class ="pics" src="Bessey.jpg">
+      <img  class ="zoom" src="Bessey.jpg">
 			</p>
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Beyer+Hall');"  style="cursor:pointer;" target="_blank">Beyer Hall</ins><br>
 			&emsp;&emsp;
-			<img src="byer.jpg" style="width:70px;height:70px;">
+			<img class ="pics" src="byer.jpg" >
+      <img class ="zoom" src="byer.jpg" >
 			</p>
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Black+Engineering');"  style="cursor:pointer;" target="_blank">Black Engineering</ins><br>
 			&emsp;&emsp;
-			<img src="Black.jpg" style="width:70px;height:70px;">
+			<img class ="pics" src="Black.jpg">
+      	<img class ="zoom" src="Black.jpg">
 			</p>
 		</div>
-				
+
 		<div class="col-3 col-m-12 building">
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Carver+Hall');"  style="cursor:pointer;" target="_blank">Carver Hall</ins><br>
 			&emsp;&emsp;
-			<img src="Carverhall.jpg" style="width:70px;height:70px;">
+			<img class ="pics" src="Carverhall.jpg" >
+      <img class ="zoom" src="Carverhall.jpg" >
 			</p>
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Catt+Hall');"  style="cursor:pointer;" target="_blank">Catt Hall</ins><br>
 			&emsp;&emsp;
-			<img src="Atanasoff_H.jpg" style="width:70px;height:70px;">
+			<img class ="pics"src="catt.jpg" >
+      <img class ="zoom"src="catt.jpg" >
 			</p>
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=College+of+Design');"  style="cursor:pointer;" target="_blank">College of Design</ins><br>
 			&emsp;&emsp;
-			<img src="design.jpg" style="width:70px;height:70px;">
+			<img class ="pics" src="design.jpg" >
+      	<img class ="zoom" src="design.jpg" >
 			</p>
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Coover+Hall');"  style="cursor:pointer;" target="_blank">Coover Hall</ins><br>
 			&emsp;&emsp;
-			<img src="design.jpg" style="width:70px;height:70px;">
+			<img class ="pics" src="coover.jpg" >
+      <img class ="zoom" src="coover.jpg" >
 			</p>
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Curtiss+Hall');"  style="cursor:pointer;" target="_blank">Curtiss Hall</ins><br>
 			&emsp;&emsp;
-			<img src="Atanasoff_Hall.jpg" style="width:70px;height:70px;">
+			<img class ="pics" src="curtis.jpg" >
+      <img class ="zoom" src="curtis.jpg" >
 			</p>
 		</div>
-				
+
 		<div class="col-3 col-m-12 building">
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Durham+Center');"  style="cursor:pointer;" target="_blank">Durham Center</ins><br>
 			&emsp;&emsp;
-			<img src="Atanasoff_Hall.jpg" style="width:70px;height:70px;">
+			<img  class ="pics"src="durham.jpg" >
+      <img  class ="zoom"src="durham.jpg" >
 			</p>
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=East+Hall');"  style="cursor:pointer;" target="_blank">East Hall</ins><br>
 			&emsp;&emsp;
-			<img src="Atanasoff_Hall.jpg" style="width:70px;height:70px;">
+			<img class ="pics" src="east.jpg" >
+      <img class ="zoom" src="east.jpg" >
 			</p>
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Elings+Hall');"  style="cursor:pointer;" target="_blank">Elings Hall</ins><br>
 			&emsp;&emsp;
-			<img src="Atanasoff_Hall.jpg" style="width:70px;height:70px;">
+			<img class ="pics" src="elings.jpg" >
+      <img class ="zoom" src="elings.jpg" >
 			</p>
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Forker+Building');"  style="cursor:pointer;" target="_blank">Forker Building</ins><br>
-			&emsp;&emsp; 
-			<img src="Atanasoff_Hall.jpg" style="width:70px;height:70px;">
+			&emsp;&emsp;
+			<img class ="pics" src="forker.jpg" >
+      <img class ="zoom" src="forker.jpg" >
 			</p>
 		</div>
 	</div>
@@ -317,16 +349,16 @@ ul{
 			<p><b>David Bane</b><br>
 			<p><b>Jonah Bartz</b><br>
 		</section>
-		
+
 		<section>
 			<h3>Insert text here</h3>
 		</section>
-		
+
 		<section>
 			<img src = "state.gif" />
 		</section>
 	</footer>
-	
+
 	<footer class = "second">
 		<h4> ©Copyright - ExploreState 2017.</h4>
 	</footer>
