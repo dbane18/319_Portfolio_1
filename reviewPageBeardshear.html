@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8"/>
+    <title>
+        Beardshear Hall Review
+    </title>
+    <style>
+    @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+    fieldset, label { margin: 0; padding: 0; }
+    body{ margin: 20px; }
+    h1 { font-size: 1.5em; margin: 10px; }
+
+    /****** Style Star Rating Widget *****/
+
+    .rating { 
+      border: none;
+      float: left;
+    }
+    .submit input
+    {
+      border-style: solid;
+    border-color: #ff0000 #0000ff;
+/*        background-color: #cccccc;
+*/    }
+    #ratingAverage  {
+    border: none;
+/*    background: transparent;
+*/    }
+
+    .rating > input { display: none; } 
+    .rating > label:before { 
+      margin: 5px;
+      font-size: 1.25em;
+      font-family: FontAwesome;
+      display: inline-block;
+      content: "\f005";
+    }
+
+    .rating > .half:before { 
+      content: "\f089";
+      position: absolute;
+    }
+
+    .rating > label { 
+      color: #ddd; 
+     float: right; 
+    }
+    h1{
+    margin-top: 5px;
+    margin-bottom: -10px;
+    text-decoration: underline;
+    }
+    #building
+    {
+      margin-top: 5px;
+      margin-bottom: 0px;
+      text-decoration: underline;
+    }
+
+    /***** CSS Magic to Highlight Stars on Hover *****/
+
+    .rating > input:checked ~ label, /* show gold star when clicked */
+    .rating:not(:checked) > label:hover, /* hover current star */
+    .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+    .rating > input:checked + label:hover, /* hover current star when changing rating */
+    .rating > input:checked ~ label:hover,
+    .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+    .rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+    </style>
+    <script type="text/javascript">
+      var totalNumVotes=0;
+      var totalValVotes=0;
+
+      function submitReview(x)
+      {
+        var average;
+        totalNumVotes++;
+        totalValVotes+=x;
+        average=totalValVotes/totalNumVotes;
+        reviewPage.display.value=average;
+       // return average;
+      }
+    </script>
+  </head>
+  <title>Beardshear Hall Review</title>
+  <body>
+    <form name = reviewPage>
+    <h1 id="building">Beardshear Hall</h1>
+      <fieldset class="rating">
+        <input type="radio" id="star5" name="rating" value="5" onclick="submitReview(5)"/>
+        <label class = "full" for="star5" title="Awesome - 5 stars"></label>
+
+        <input type="radio" id="star4" name="rating" value="4" onclick="submitReview(4)"/>
+        <label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+
+        <input type="radio" id="star3" name="rating" value="3" onclick="submitReview(3)"/>
+        <label class = "full" for="star3" title="Meh - 3 stars"></label>
+
+        <input type="radio" id="star2" name="rating" value="2" onclick="submitReview(2)"/>
+        <label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+
+        <input type="radio" id="star1" name="rating" value="1" onclick="submitReview(1)"/>
+        <label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+      </fieldset><br><br>
+      <label for="ratingAverage"><b>&nbsp;&nbsp;&nbsp;Rating Average:<b></label>
+    <input id="ratingAverage" name="display" type="text" style="width:19px"></td>
+    </form>
+    <form>
+<table>
+<textarea id="words" rows="10" cols="20">Type review</textarea>
+</table>
+<table>
+<textarea id="user" rows = "1" cols="20">Enter username</textarea>
+</table>
+<input id="submit" type="button" onclick="getwords()" value="Submit" /> <br>
+<table>
+<h1>Comments</h1>
+</table>
+<p id="para"></p>
+</form>
+
+<script type="text/javascript">
+
+  function getwords() {
+  text = words.value;
+  user = user.value;
+  document.getElementById("para").innerHTML += '<p>'+user+":  "+text
+ // document.getElementById("words").value = "enter"
+}
+</script>
+  </body>  
+</html>
