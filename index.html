@@ -9,19 +9,19 @@
 
 <style>
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .row::after{
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 [class*="col-"]{
-    float: left;
-    padding: 15px;
+  float: left;
+  padding: 15px;
 }
 html{
-    font-family: "Lucida Sans", sans-serif;
+  font-family: "Lucida Sans", sans-serif;
 }
 a{
 	color: #FFF;
@@ -103,8 +103,8 @@ h5{
   padding-left: 5%;
 }
 .header{
-    background-color: #C01111;
-    color: #ffffff;
+  background-color: #C01111;
+  color: #ffffff;
 	opacity: 0.90;
 	height: 120px;
 	position: fixed;
@@ -117,28 +117,24 @@ h5{
 	line-height: 40px;
 	padding:2px;
 }
-ins{
-	font-weight: normal;
-	text-decoration:none;
-}
 .menu li {
-    padding: 9.5px;
-    margin-bottom: 7px;
-    background-color: #e6b800;
-    color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    font-size: 15px;
+  padding: 9.5px;
+  margin-bottom: 7px;
+  background-color: #e6b800;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  font-size: 15px;
 }
 .menu li:hover{
-    background-color: #4D4E50;
+  background-color: #4D4E50;
 }
 .menu ul{
-    list-style-type: none;
-    margin: 0;
-    padding-top: 0px;
-  	margin-top: 0px;
-  	text-align:center;
-    width:130%;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 0px;
+	margin-top: 0px;
+	text-align:center;
+  width:130%;
 }
 p{
 	margin-top: 1px;
@@ -158,50 +154,47 @@ ul{
 
 /* For mobile phones: */
 [class*="col-"] {
-    width: 100%;
+  width: 100%;
 }
 @media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .col-m-1 {width: 8.33%;}
-    .col-m-2 {width: 16.66%;}
-    .col-m-3 {width: 25%;}
-    .col-m-4 {width: 33.33%;}
-    .col-m-5 {width: 41.66%;}
-    .col-m-6 {width: 50%;}
-    .col-m-7 {width: 58.33%;}
-    .col-m-8 {width: 66.66%;}
-    .col-m-9 {width: 75%;}
-    .col-m-10 {width: 83.33%;}
-    .col-m-11 {width: 91.66%;}
-    .col-m-12 {width: 100%;}
+  /* For tablets: */
+  .col-m-1 {width: 8.33%;}
+  .col-m-2 {width: 16.66%;}
+  .col-m-3 {width: 25%;}
+  .col-m-4 {width: 33.33%;}
+  .col-m-5 {width: 41.66%;}
+  .col-m-6 {width: 50%;}
+  .col-m-7 {width: 58.33%;}
+  .col-m-8 {width: 66.66%;}
+  .col-m-9 {width: 75%;}
+  .col-m-10 {width: 83.33%;}
+  .col-m-11 {width: 91.66%;}
+  .col-m-12 {width: 100%;}
 }
 @media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
 }
 </style>
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 </head>
-
-
 <body>
 	<div class="header">
 		<div class="col-2.5 col-m-2 menu">
 			<ul>
-        <!-- <center><a href="index.html"><img src="profileoverlayblob.png"></center> -->
         <h5>ExploreState</h5>
-				<li><a href="indexWithCustom.html"class="current">Home</a></li>
+				<li><a href="index.html"class="current">Home</a></li>
 				<li><a href="buildingdirectory.html">Building Directory</a></li>
 			</ul>
 		</div>
@@ -211,8 +204,7 @@ ul{
 		.map {float: center;}
 	</style>
 
-	<div class="map" id="map" style="width:100%;height:400px;background:yellow;margin-top: 120px;">
-	</div>
+	<div class="map" id="map" style="width:100%;height:400px;background:yellow;margin-top: 120px;"></div>
 	<div id="map"></div>
 	<script type="text/javascript">
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -220,19 +212,16 @@ ul{
       center: new google.maps.LatLng(42.0264, -93.646790),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-
     var durhamMarker = new google.maps.Marker({
       position: new google.maps.LatLng(42.027311, -93.649893), //durham center
       url: './reviewPageDurham.html',
       map: map
     });
-
     var attanasoffMarker = new google.maps.Marker({
       position: new google.maps.LatLng(42.028132, -93.649806), //attanasoff
       url: './reviewPageAttanasoff.html',
       map: map
     });
-
     var carverMarker = new google.maps.Marker({
       position: new google.maps.LatLng(42.025202, -93.648550), //carver hall
       url: './reviewPageCarver.html',
@@ -344,7 +333,6 @@ ul{
     google.maps.event.addListener(muMarker, 'click', function() {
     	window.open (muMarker.url,"mywindow","menubar=1,resizable=1,width=350,height=400");
     });
-
   </script>
 
 	<footer>

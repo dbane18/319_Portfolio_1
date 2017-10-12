@@ -15,11 +15,7 @@
     content: "";
     clear: both;
     display: table;
-
 }
-
-
-
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -39,16 +35,6 @@ a:hover{
 a:hover#menu-icon{
 	border-radius: 4px 4px 0 0;
 }
-.aside{
-    background-color: #e6b800;
-    padding: 15px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	margin-top: 130px;
-}
-
 body{
 	background: #FFF;
 	font: 14px/20px Arial, San-Serif;
@@ -167,24 +153,13 @@ p{
 	margin-top: 90px;
 	padding: 3%;
 }
-.random{
-
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
-	margin-left: 15px;
+.pics{
+  width: 40px;
+  height:40px;
 }
-.random h3{
-	line-height:110%;
-	padding: 5% 0;
-	text-decoration: underline;
+.pics:hover + .zoom{
+  width:350px;
 
-}
-.random p{
-	margin-top: 1px;
-	width: 100%;
-	margin: 4% 4%;
-	text-align: left;
 }
 section{
 	width: 29%;
@@ -195,12 +170,19 @@ section{
 ul{
 	list-style:none;
 }
-/* For mobile phones: */
+.zoom{
+	position: absolute;
+	width:0px;
+	-webkit-transition:width 0.3s linear 0s;
+	transition: width 0.3s linear 0s;
+	z-index: 10;
+}
+/* Mobile: */
 [class*="col-"] {
     width: 100%;
 }
 @media only screen and (min-width: 600px) {
-    /* For tablets: */
+    /* Tablets: */
     .col-m-1 {width: 8.33%;}
     .col-m-2 {width: 16.66%;}
     .col-m-3 {width: 25%;}
@@ -215,7 +197,7 @@ ul{
     .col-m-12 {width: 100%;}
 }
 @media only screen and (min-width: 768px) {
-    /* For desktop: */
+    /* Desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -229,47 +211,24 @@ ul{
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 }
-.pics{
-  width: 40px;
-  height:40px;
-}
-.zoom{
-  position: absolute;
-  width:0px;
-  -webkit-transition:width 0.3s linear 0s;
-  transition: width 0.3s linear 0s;
-z-index: 10;
-
-}
-.pics:hover + .zoom{
-  width:350px;
-
-}
 </style>
 </head>
-
 <body>
 	<div class="header">
-		<!--<center><a href="index.html"><img src="state.gif"></center>-->
 		<div class="col-2.5 col-m-2 menu">
 			<ul>
 			<h5>ExploreState</h5>
-				<li><a href="indexWithCustom.html">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 				<li><a href="buildingdirectory.html"class="current">Building Directory</a></li>
 			</ul>
 		</div>
 	</div>
-
 	<div class="row">
 		<div class = "mainbody">
 			<h1>Directory building links</h1>
-
-			<div class="col-2 col-m-12 random">
-				
+			<div class="col-2 col-m-12 pageBreak">
 			</div>
 		</div>
-
-		<!--all the http://www.fpm.iastate.edu/maps/buildings/ links will need to change to our own web page links-->
 		<div class="col-3 col-m-12 building" >
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Atanasoff+Hall');"  style="cursor:pointer;" target="_blank">Attanasoff Hall</ins><br>
 			&emsp;&emsp;
@@ -297,7 +256,6 @@ z-index: 10;
       	<img class ="zoom" src="Black.jpg">
 			</p>
 		</div>
-
 		<div class="col-3 col-m-12 building">
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Carver+Hall');"  style="cursor:pointer;" target="_blank">Carver Hall</ins><br>
 			&emsp;&emsp;
@@ -325,7 +283,6 @@ z-index: 10;
       <img class ="zoom" src="curtis.jpg" >
 			</p>
 		</div>
-
 		<div class="col-3 col-m-12 building">
 			<p><ins onclick="window.open('http://www.fpm.iastate.edu/maps/buildings/building.asp?building=Durham+Center');"  style="cursor:pointer;" target="_blank">Durham Center</ins><br>
 			&emsp;&emsp;
